@@ -1,0 +1,28 @@
+{
+  "name": "realworld",
+  "version": "1.0.0",
+  "description": "An implementation of the \"RealWorld\" app for trying some patterns in Node and React.",
+  "main": "index.js",
+  "scripts": {
+    "db:shell": "docker-compose exec postgres psql",
+    "kv:shell": "docker-compose exec redis redis-cli",
+    "services:start": "docker-compose up -d --build",
+    "services:stop": "docker-compose down",
+    "services:restart": "run-s -s services:stop services:start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebearingedge/realworld.git"
+  },
+  "keywords": [],
+  "author": "Tim Davis <contact@timdav.is>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebearingedge/realworld/issues"
+  },
+  "homepage": "https://github.com/thebearingedge/realworld#readme",
+  "devDependencies": {
+    "cypress": "^5.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
